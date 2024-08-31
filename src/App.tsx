@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
 import NotFound from "./pages/NotFound";
+import Projects from "./pages/Projects";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <main className="flex-grow">
             <Routes>
               <Route path="/:lang/" element={<Home />} />
+              <Route path="/:lang/projects" element={<Projects />} />
               <Route path="/:lang/aboutme" element={<AboutMe />} />
               <Route path="/:lang/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
